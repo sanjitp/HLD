@@ -1,0 +1,14 @@
+Types of Indexing
+
+
+1. B-trees
+2. LSM-trees
+3. Hashing
+4. Geospatial Indexing
+5. Inverted Indexing
+
+
+
+1. B TREES
+A B-tree is a self-balancing tree that maintains sorted data and allows for efficient insertions, deletions, and searches.
+Each node contains an ordered array of keys and pointers, structured to minimize disk reads.
