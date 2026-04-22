@@ -1,0 +1,168 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="VUoIvT2zVu4j11_V040g">
+    <mxGraphModel dx="3061" dy="2517" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Comic Sans MS;fontSize=13;" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Merchant&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="120" x="80" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Comic Sans MS;fontSize=13;" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;API GATEWAY&lt;br&gt;&lt;br&gt;Authentication&lt;/font&gt;" vertex="1">
+          <mxGeometry height="300" width="140" x="300" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Comic Sans MS;fontSize=13;" value="&lt;font&gt;&lt;u style=&quot;&quot;&gt;FUNCTIONAL REQUIREMENTS&lt;/u&gt;&lt;/font&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Merchants should be able to initiate payments.&lt;/div&gt;&lt;div&gt;2. Users should be able to pay via Debit/credit cards.&lt;/div&gt;&lt;div&gt;3. Merchants should be able to view the status of the payments.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="410" x="-530" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Comic Sans MS;fontSize=13;" value="&lt;u&gt;&lt;font&gt;NON-FUNTIONAL REQUIREMENTS&lt;/font&gt;&lt;br&gt;&lt;/u&gt;&lt;br&gt;&lt;div&gt;1. Scale to 10TPS.&lt;/div&gt;&lt;div&gt;2. System should be highly secure.&lt;/div&gt;&lt;div&gt;3. Strong durability (no transaction loss)&lt;/div&gt;&lt;div&gt;4.Transaction safety and financial integrity(no double charge)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="410" x="-530" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontStyle=1;fontSize=13;" value="&lt;u&gt;&lt;font&gt;&lt;span&gt;CORE ENTITIES&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/u&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;1. Merchant: Info about the business&lt;br&gt;2. Payment Intent: Purpose of payment and status of the payment.&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;font&gt;3. Transactions: Actual transaction linked to one Payment Intent(Charge, Refund, Dispute)&lt;br&gt;&lt;/font&gt;- &lt;font style=&quot;&quot;&gt;Amount, currency, status, timestamp, paymentIntentId, merchantId&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="420" x="-530" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontStyle=1;fontSize=13;" value="&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;u style=&quot;&quot;&gt;&lt;font&gt;API&lt;/font&gt;&lt;/u&gt;&lt;br&gt;&lt;br&gt;POST /payment-intents -&amp;gt; paymentIntentId&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &quot;amountInCents&quot;: 2499,&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &quot;currency&quot;: &quot;usd&quot;,&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &quot;description&quot;: &quot;Order #1234&quot;,&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;}&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;POST /payment-intents/{paymentIntentId}/transactions&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &quot;type&quot;: &quot;charge&quot;,&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &quot;card&quot;: {&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; &quot;number&quot;: &quot;4242424242424242&quot;,&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; &quot;exp_month&quot;: 12,&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; &quot;exp_year&quot;: 2025,&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; &quot;cvc&quot;: &quot;123&quot;&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; }&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;}&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span&gt;GET /payment-intents/{paymentIntentId} -&amp;gt; PaymentIntent&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="430" width="450" x="-560" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-10" edge="1" parent="1" source="v7wYzxMNztZIk_eU5v4j-1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;fontFamily=Comic Sans MS;fontStyle=1;fontSize=13;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="360" y="299" as="sourcePoint" />
+            <mxPoint x="300" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontStyle=1;fontSize=13;" value="&lt;span&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;Payment Intent service&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="200" x="540" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-12" edge="1" parent="1" source="v7wYzxMNztZIk_eU5v4j-4" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1.024;exitY=0.447;exitDx=0;exitDy=0;exitPerimeter=0;fontFamily=Comic Sans MS;fontStyle=1;fontSize=13;" target="v7wYzxMNztZIk_eU5v4j-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="360" y="410" as="sourcePoint" />
+            <mxPoint x="410" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-13" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Comic Sans MS;fontStyle=1;fontSize=13;" value="&lt;span&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;Database&lt;br&gt;(Postgres)&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="100" x="790" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-14" edge="1" parent="1" source="v7wYzxMNztZIk_eU5v4j-11" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontFamily=Comic Sans MS;fontStyle=1;fontSize=13;" target="v7wYzxMNztZIk_eU5v4j-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="360" y="410" as="sourcePoint" />
+            <mxPoint x="410" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontStyle=1;fontSize=13;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;font style=&quot;&quot;&gt;PaymentIntent&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- id&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;- merchantId&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;- customerId&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;- status&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;- timestamp&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;- amount&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;- product&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;- metadata&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="120" x="900" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Comic Sans MS;fontSize=13;" value="&lt;span&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Transaction Service&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="200" x="550" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-17" edge="1" parent="1" source="v7wYzxMNztZIk_eU5v4j-4" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.997;exitY=0.693;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontStyle=1;fontFamily=Comic Sans MS;exitPerimeter=0;fontSize=13;" target="v7wYzxMNztZIk_eU5v4j-16" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="480" as="sourcePoint" />
+            <mxPoint x="730" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-18" edge="1" parent="1" source="v7wYzxMNztZIk_eU5v4j-16" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontStyle=1;fontFamily=Comic Sans MS;fontSize=13;" target="v7wYzxMNztZIk_eU5v4j-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="480" as="sourcePoint" />
+            <mxPoint x="730" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Comic Sans MS;fontSize=13;" value="&lt;span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;font style=&quot;&quot;&gt;Transactions&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- id&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/span&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;- paymentIntentId(FK)&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;- amount&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;- type&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;- status&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;- timestamp&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;- network&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;- metadata&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="160" x="1060" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-22" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fontFamily=Comic Sans MS;" value="&lt;font style=&quot;color: rgb(49, 186, 255); font-size: 18px;&quot;&gt;Customer&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="120" x="-100" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-23" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=13;fontStyle=1;fontFamily=Comic Sans MS;" target="v7wYzxMNztZIk_eU5v4j-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="5" y="320" as="sourcePoint" />
+            <mxPoint x="380" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-24" edge="1" parent="1" source="v7wYzxMNztZIk_eU5v4j-25" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.485;exitY=0.103;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=13;fontStyle=1;fontFamily=Comic Sans MS;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="625" y="530" as="sourcePoint" />
+            <mxPoint x="621" y="467" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-25" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Comic Sans MS;fontColor=#31BAFF;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;External Payment network&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;(Visa, Mastercard etc)&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="265" x="492.5" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Comic Sans MS;" value="&lt;span&gt;&lt;font style=&quot;&quot;&gt;&lt;u style=&quot;font-size: 23px;&quot;&gt;Security concerns&lt;/u&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;&quot;&gt;1. Validating merchants&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;&quot;&gt;2. Protecting customers personal info&lt;/font&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="190" width="460" x="-570" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Comic Sans MS;" value="&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;u style=&quot;&quot;&gt;1.Validating merchants&lt;/u&gt;&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;font-size: 23px; text-align: left;&quot;&gt;&lt;span style=&quot;text-decoration-line: underline; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;Provide two set of keys while merchant onboarding&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;1. Public API key - to be part of Headers like - Bearer &amp;lt;API_KEY&amp;gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;2. Private secret key securely stored in merchants server to authenticate the&amp;nbsp; &amp;nbsp;merchant server with our system&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;font-size: 23px; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;For each request the merchant server generates a digital signature using request details(body, public key, endpoint, parameters) along with timestamp and a unique nonce using secret key, it can never be tampered because the signature contains the timestamp or nonce was already used&amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="340" width="790" x="-100" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-29" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Comic Sans MS;" value="&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 25px;&quot;&gt;&lt;u style=&quot;&quot;&gt;2.Protect Customer private info&lt;/u&gt;&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&amp;nbsp;Using Iframe and encryption&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;Our server generates and maintain key encryption key-pairs&lt;br&gt;we provide a JavaScript SDK which loads an Iframe from our domain on the merchant webpage and uses the encryption keys to secure the data.&lt;br&gt;When customer enters the card details on the iframe , it encrypts the data and sends it directly to our system using HTTPS , where it gets decrypted using the private key stored in HSM&lt;/font&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="280" width="790" x="770" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-30" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Comic Sans MS;" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;IFrame&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="80" x="100" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-32" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Comic Sans MS;" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;u style=&quot;&quot;&gt;Durability and Auditability&lt;/u&gt;&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 22px;&quot;&gt;We have to track the entire state changes happening for a payment Intent&lt;br&gt;&lt;br&gt;Auditability comes from Database - CDC - Kafka - Consumers - S3&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="150" width="840" x="760" y="1110" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-33" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontStyle=1;fontFamily=Comic Sans MS;" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;&lt;span&gt;Kafka Event Stream&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="230" x="940" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-34" edge="1" parent="1" source="v7wYzxMNztZIk_eU5v4j-13" style="curved=1;endArrow=classic;html=1;rounded=0;fontStyle=1;fontFamily=Comic Sans MS;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="v7wYzxMNztZIk_eU5v4j-33" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="820" y="390" />
+              <mxPoint x="880" y="500" />
+            </Array>
+            <mxPoint x="830" y="390" as="sourcePoint" />
+            <mxPoint x="920" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontFamily=Comic Sans MS;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;CDC&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="850" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-36" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 17px;&quot; face=&quot;Comic Sans MS&quot;&gt;&lt;b&gt;S3&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="120" x="1275" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-37" edge="1" parent="1" source="v7wYzxMNztZIk_eU5v4j-33" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.13;entryY=0.77;entryDx=0;entryDy=0;entryPerimeter=0;" target="v7wYzxMNztZIk_eU5v4j-36" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="450" y="500" as="sourcePoint" />
+            <mxPoint x="1180" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 18px;&quot; face=&quot;Comic Sans MS&quot;&gt;&lt;b style=&quot;&quot;&gt;Reconciliation Service&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="1340" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-39" edge="1" parent="1" source="v7wYzxMNztZIk_eU5v4j-33" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="v7wYzxMNztZIk_eU5v4j-38" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="840" y="590" as="sourcePoint" />
+            <mxPoint x="890" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 15px;&quot; face=&quot;Comic Sans MS&quot;&gt;&lt;b&gt;Timeout Events&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="100" x="1210" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-42" edge="1" parent="1" source="v7wYzxMNztZIk_eU5v4j-38" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.968;entryY=0.59;entryDx=0;entryDy=0;entryPerimeter=0;fontStyle=3" target="v7wYzxMNztZIk_eU5v4j-25" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1230" y="650" />
+              <mxPoint x="810" y="630" />
+            </Array>
+            <mxPoint x="1060" y="650" as="sourcePoint" />
+            <mxPoint x="860" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-43" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;b&gt;&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 16px;&quot;&gt;Query for batch&amp;nbsp;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 16px;&quot;&gt;reconciliation files or one&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 16px;&quot;&gt;off direct queries&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="200" x="1060" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-44" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1330" y="500" as="sourcePoint" />
+            <mxPoint x="890" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-45" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; face=&quot;Comic Sans MS&quot;&gt;Write updates&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="110" x="1010" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="v7wYzxMNztZIk_eU5v4j-47" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 30px;&quot;&gt;&lt;b style=&quot;&quot;&gt;PAYMENT SYSTEM&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="440" x="330" y="-40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
